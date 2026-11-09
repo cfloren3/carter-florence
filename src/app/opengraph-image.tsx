@@ -5,7 +5,7 @@ import path from "node:path";
 import { profile } from "@/data/profile";
 import { assetExists } from "@/lib/assets";
 
-export const alt = "Carter Florence: Entrepreneur, Western University student & aspiring strategist";
+export const alt = "Carter Florence, student entrepreneur from Guelph, Ontario, and Western University student";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

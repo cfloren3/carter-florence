@@ -108,13 +108,13 @@ export const projects: Project[] = [
       { title: "In the press", detail: "GuelphToday and futurist Jim Carroll" },
     ],
     cover: {
-      src: "/images/projects/yardex/cover.jpg",
+      src: "/images/projects/yardex/yardex-guelph-striped-lawn.jpg",
       alt: "A freshly striped, edged front lawn maintained by Yardex in Guelph",
       placeholderLabel: "Yardex, wide business photo",
     },
     gallery: [
-      { src: "/images/projects/yardex/edging.jpg", alt: "Carter Florence edging a lawn in a Yardex shirt", placeholderLabel: "Edging", focus: "50% 45%" },
-      { src: "/images/projects/yardex/oak-lawn.jpg", alt: "A finished Yardex front lawn under a large oak tree", placeholderLabel: "Finished lawn", focus: "50% 60%" },
+      { src: "/images/projects/yardex/carter-florence-yardex-guelph-edging.jpg", alt: "Carter Florence edging a lawn in a Yardex shirt", placeholderLabel: "Edging", focus: "50% 45%" },
+      { src: "/images/projects/yardex/yardex-guelph-lawn-oak-tree.jpg", alt: "A finished Yardex front lawn under a large oak tree", placeholderLabel: "Finished lawn", focus: "50% 60%" },
     ],
     qa: [
       {
@@ -168,14 +168,14 @@ export const projects: Project[] = [
         { title: "Crew codes", text: "Add a crew member by email and they get a code. Signed in within seconds." },
       ],
       screens: [
-        { kind: "desktop", src: "/images/projects/traitcrm/dashboard.jpg", width: 1064, height: 892, alt: "The TraitCRM dashboard showing revenue, jobs today, net profit, a monthly revenue chart, top clients and expenses", placeholderLabel: "Dashboard", caption: "The dashboard" },
-        { kind: "phone", src: "/images/projects/traitcrm/timer.jpg", width: 1064, height: 1096, alt: "The TraitCRM job timer on a phone, showing a live timer and dollars-per-minute score", placeholderLabel: "Job timer", caption: "The crew’s job timer" },
-        { kind: "desktop", src: "/images/projects/traitcrm/clients.jpg", width: 1068, height: 660, alt: "The TraitCRM client list with billing types and prices", placeholderLabel: "Clients", caption: "Clients and billing" },
-        { kind: "desktop", src: "/images/projects/traitcrm/expenses.jpg", width: 1068, height: 792, alt: "The TraitCRM expenses screen with this month’s costs and net profit", placeholderLabel: "Expenses", caption: "Expenses and real profit" },
-        { kind: "desktop", src: "/images/projects/traitcrm/crew.jpg", width: 1072, height: 648, alt: "TraitCRM crew settings with 6-digit sign-in codes and the crew sign-in keypad", placeholderLabel: "Crew codes", caption: "Crew sign-in codes" },
+        { kind: "desktop", src: "/images/projects/traitcrm/traitcrm-dashboard.jpg", width: 1064, height: 892, alt: "The TraitCRM dashboard showing revenue, jobs today, net profit, a monthly revenue chart, top clients and expenses", placeholderLabel: "Dashboard", caption: "The dashboard" },
+        { kind: "phone", src: "/images/projects/traitcrm/traitcrm-job-timer.jpg", width: 1064, height: 1096, alt: "The TraitCRM job timer on a phone, showing a live timer and dollars-per-minute score", placeholderLabel: "Job timer", caption: "The crew’s job timer" },
+        { kind: "desktop", src: "/images/projects/traitcrm/traitcrm-clients-billing.jpg", width: 1068, height: 660, alt: "The TraitCRM client list with billing types and prices", placeholderLabel: "Clients", caption: "Clients and billing" },
+        { kind: "desktop", src: "/images/projects/traitcrm/traitcrm-expenses-profit.jpg", width: 1068, height: 792, alt: "The TraitCRM expenses screen with this month’s costs and net profit", placeholderLabel: "Expenses", caption: "Expenses and real profit" },
+        { kind: "desktop", src: "/images/projects/traitcrm/traitcrm-crew-sign-in-codes.jpg", width: 1072, height: 648, alt: "TraitCRM crew settings with 6-digit sign-in codes and the crew sign-in keypad", placeholderLabel: "Crew codes", caption: "Crew sign-in codes" },
       ],
     },
-    cover: { src: "/images/projects/traitcrm/dashboard.jpg", alt: "The TraitCRM dashboard", placeholderLabel: "TraitCRM" },
+    cover: { src: "/images/projects/traitcrm/traitcrm-dashboard.jpg", alt: "The TraitCRM dashboard", placeholderLabel: "TraitCRM" },
     gallery: [],
     qa: [
       {
@@ -221,19 +221,19 @@ export const projects: Project[] = [
       { value: "900+", label: "Audience I spoke to at the gala", scope: "individual" },
     ],
     cover: {
-      src: "/images/projects/beyond-borders/evolve-stage.jpg",
+      src: "/images/projects/beyond-borders/beyond-borders-evolve-gala-stage.jpg",
       alt: "The Beyond Borders Evolve Gala cast on stage in a theatre, under the Evolve logo",
       placeholderLabel: "Evolve Gala, stage",
     },
     gallery: [
       {
-        src: "/images/projects/beyond-borders/evolve-lectern.jpg",
+        src: "/images/projects/beyond-borders/carter-florence-evolve-gala-speaking.jpg",
         alt: "Carter Florence at the Beyond Borders lectern during the Evolve Gala, seen from the balcony",
         placeholderLabel: "Evolve Gala, lectern",
         focus: "45% 52%",
       },
       {
-        src: "/images/projects/beyond-borders/wish-fund-cheque.jpg",
+        src: "/images/projects/beyond-borders/beyond-borders-guelph-wish-fund-cheque.jpg",
         alt: "Carter Florence and two teammates holding a $63,750 Beyond Borders cheque to the Guelph Wish Fund for Children",
         placeholderLabel: "Cheque presentation",
         caption: "$63,750 from Beyond Borders to the Guelph Wish Fund for Children.",
@@ -287,7 +287,7 @@ export const projects: Project[] = [
     ],
     sequenceCaptions: ["Presenting to 2,600+ attendees at the Provincial Championships."],
     cover: {
-      src: "/images/projects/deca/provincials-lectern.jpg",
+      src: "/images/projects/deca/carter-florence-deca-provincials-speaking.jpg",
       alt: "Carter Florence speaking at the lectern at the Ontario DECA Provincial Championships, with the officer team on screen",
       focus: "50% 45%",
       placeholderLabel: "Provincials, lectern",

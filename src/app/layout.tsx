@@ -36,7 +36,9 @@ export const metadata: Metadata = {
   creator: profile.fullName,
   alternates: { canonical: "/" },
   openGraph: {
-    type: "website",
+    type: "profile",
+    firstName: profile.firstName,
+    lastName: profile.lastName,
     locale: site.locale,
     url: "/",
     siteName: profile.fullName,
@@ -48,7 +50,9 @@ export const metadata: Metadata = {
     title: site.title,
     description: site.description,
   },
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
+  ...(site.googleSiteVerification ? { verification: { google: site.googleSiteVerification } } : {}),
+  category: "Personal website",
 };
 
 export const viewport: Viewport = {

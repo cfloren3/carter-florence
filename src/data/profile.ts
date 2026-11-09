@@ -31,7 +31,7 @@ export const profile = {
   heroLine: "Western University · International Relations · Ivey AEO",
 
   portrait: {
-    src: "/images/portrait/carter-florence.jpg",
+    src: "/images/portrait/carter-florence-guelph-portrait.jpg",
     alt: "Carter Florence in a grey suit, white shirt and light pink tie",
     focus: "50% 24%",
     aspect: 1047 / 1605,

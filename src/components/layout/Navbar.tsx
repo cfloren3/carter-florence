@@ -103,7 +103,7 @@ export function Navbar() {
       >
         <nav aria-label="Primary" className="shell flex h-16 items-center justify-between gap-6">
           <Link
-            href="#top"
+            href={isHome ? "#top" : "/"}
             onClick={() => setOpen(false)}
             className="relative z-10 flex items-center gap-1.5 text-[0.9375rem] font-semibold tracking-[-0.02em]"
             aria-label={`${profile.fullName}, home`}
@@ -123,7 +123,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-5">
             <a
-              href="#contact-form"
+              href={isHome ? "#contact-form" : "/#contact-form"}
               className="group hidden items-center gap-1.5 text-[0.8125rem] font-semibold sm:inline-flex"
             >
               <span className="link-line">Get in touch</span>
@@ -184,7 +184,7 @@ export function Navbar() {
               transition={{ delay: 0.55, duration: 0.5 }}
               className="shell flex flex-wrap items-center gap-x-8 gap-y-2 py-8 text-sm"
             >
-              <a href="#contact-form" onClick={() => setOpen(false)} className="group flex min-h-11 items-center gap-2">
+              <a href={isHome ? "#contact-form" : "/#contact-form"} onClick={() => setOpen(false)} className="group flex min-h-11 items-center gap-2">
                 Get in touch <Arrow />
               </a>
               {contact.linkedin && (

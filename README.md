@@ -1,5 +1,7 @@
 # Carter Florence — Portfolio
 
+> **SEO:** see [docs/SEO.md](docs/SEO.md) for the page/keyword map, structured data, Search Console steps and how to publish articles.
+
 Personal portfolio and recruiting site for Carter Florence. Built with Next.js (App Router), TypeScript, Tailwind CSS v4, GSAP + ScrollTrigger + SplitText, Motion, Lenis and Lucide.
 
 **v4 — WebGL layer.** Three.js / React Three Fiber scenes, all code-split and client-only (`src/components/webgl/`): a fixed ambient fluid gradient (`AmbientField`) behind the light sections, a cursor-reactive particle field in the opening (`HeroParticles`), particles that physically re-form between the figures in "By the numbers" (`NumberParticles`, desktop), and a liquid form in the contact section (`MorphBlob`). Each scene mounts only near the viewport (`InView`), pauses off-screen, is skipped without WebGL, and is off (ambient = one static frame) for reduced motion. Typography: Instrument Serif display, Inter Tight body, Geist Mono labels.

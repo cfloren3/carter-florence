@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { conversation } from "@/data/conversation";
 import { projects } from "@/data/projects";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -8,12 +9,23 @@ export function Introduction() {
   const yardex = projects.find((p) => p.slug === "yardex-guelph");
   const press = projects.flatMap((p) => p.press ?? []);
   return (
-    <section id="about" aria-label="Introduction" className="relative pb-16 pt-20 lg:pb-20 lg:pt-28">
+    <section id="about" aria-labelledby="about-title" className="relative pb-16 pt-20 lg:pb-20 lg:pt-28">
       <div className="shell">
-        <Eyebrow index="01" className="text-ink">
+        <Eyebrow as="h2" id="about-title" index="01" className="text-ink">
           Introduction
         </Eyebrow>
-        <ChatThread items={conversation.intro} className="mx-auto mt-10 max-w-3xl lg:mt-12" />
+        <p className="mx-auto mt-10 max-w-3xl text-[1.1875rem] leading-relaxed text-ink/80 lg:text-[1.3125rem]">
+          Carter Florence is a student entrepreneur from Guelph, Ontario, and a student at Western University with Ivey AEO. He is the founder of{" "}
+          <Link href="/work/yardex-guelph" className="link-line text-ink">
+            Yardex Guelph
+          </Link>{" "}
+          and has experience in sales, business development, leadership and consulting.{" "}
+          <Link href="/about" className="link-line text-ink">
+            More about Carter
+          </Link>
+          .
+        </p>
+        <ChatThread items={conversation.intro} className="mx-auto mt-12 max-w-3xl lg:mt-16" />
         {press.length > 0 && (
           <p className="eyebrow mx-auto mt-12 flex max-w-3xl flex-wrap items-center gap-x-5 gap-y-2 text-mute">
             <span>As featured in</span>

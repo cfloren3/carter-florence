@@ -17,13 +17,13 @@ const TALKS = [
     figure: "2,600+",
     event: "Ontario DECA Provincial Championships",
     detail: "As a Provincial Executive Officer.",
-    img: { src: "/images/projects/deca/provincials-lectern.jpg", alt: "Carter Florence speaking at the Ontario DECA Provincial Championships", focus: "50% 45%" },
+    img: { src: "/images/projects/deca/carter-florence-deca-provincials-speaking.jpg", alt: "Carter Florence speaking at the Ontario DECA Provincial Championships", focus: "50% 45%" },
   },
   {
     figure: "900+",
     event: "Beyond Borders Evolve Gala",
     detail: "Alongside former Guelph mayor Cam Guthrie.",
-    img: { src: "/images/projects/beyond-borders/evolve-lectern.jpg", alt: "Carter Florence at the lectern at the Beyond Borders Evolve Gala", focus: "45% 55%" },
+    img: { src: "/images/projects/beyond-borders/carter-florence-evolve-gala-speaking.jpg", alt: "Carter Florence at the lectern at the Beyond Borders Evolve Gala", focus: "45% 55%" },
   },
 ];
 

@@ -1,0 +1,6 @@
+/** The canonical biography. Also written to be reused on LinkedIn and event programs. */
+export const BIO = [
+  "Carter Florence is a student entrepreneur from Guelph, Ontario. He founded Yardex Guelph, a lawn care and property maintenance company, at 13, and has grown it to $50,000 in annual revenue with recurring contracts across 50 properties and a four-person crew. He also built TraitCRM, the custom CRM the business runs on.",
+  "Carter graduated from Centennial Collegiate Vocational Institute (Centennial CVI) in Guelph with a 95% average, and now studies International Relations at Western University with Advanced Entry Opportunity (AEO) into the Ivey Business School and a Western University Scholarship of Distinction.",
+  "His leadership experience includes serving as one of 10 Ontario DECA Provincial Executive Officers, leading chapter engagement for 17,481 members, and serving as Vice President of Sales for the Beyond Borders Evolve Gala, where his 21-person team raised $185,000 in sponsorships in five weeks. At Western he is a consultant with 180 Degrees Consulting and holds director roles with the Pre-Business Students’ Network, the Western Sales & Marketing Club and Western ACE.",
+];

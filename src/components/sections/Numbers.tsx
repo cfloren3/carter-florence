@@ -62,8 +62,8 @@ export function Numbers() {
   return (
     <section ref={root} id="numbers" data-theme="dark" aria-labelledby="numbers-title" className="relative bg-ink pb-20 text-paper lg:pb-28">
       <div className="shell pt-28 lg:pt-40">
-        <Eyebrow index="02" className="text-paper">
-          <span id="numbers-title">By the numbers</span>
+        <Eyebrow as="h2" id="numbers-title" index="02" className="text-paper">
+          By the numbers
         </Eyebrow>
       </div>
 

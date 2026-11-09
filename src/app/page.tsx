@@ -1,5 +1,4 @@
 import { profile } from "@/data/profile";
-import { contact } from "@/data/socials";
 import { site } from "@/data/site";
 import { conversation, type Exchange } from "@/data/conversation";
 import { projects } from "@/data/projects";
@@ -17,8 +16,9 @@ import { ContactFab } from "@/components/layout/ContactFab";
 import { SideProgress } from "@/components/layout/SideProgress";
 import { Ambient } from "@/components/webgl/Ambient";
 import { visibleExchanges } from "@/components/chat/ChatThread";
+import { JsonLd, pageNode, personNode, websiteNode, yardexNode } from "@/lib/seo";
 
-/** The whole site is this one page. */
+/** Home: the full story as one scrolling conversation. Sub-pages go deeper. */
 export default function HomePage() {
   const portrait = resolveAsset(profile.portrait.src);
 
@@ -33,26 +33,16 @@ export default function HomePage() {
     ...withContext(conversation.contact, "Contact"),
   ];
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: profile.fullName,
-    url: site.url,
-    ...(portrait ? { image: `${site.url}${portrait}` } : {}),
-    description: site.description,
-    address: { "@type": "PostalAddress", addressRegion: "ON", addressCountry: "CA" },
-    alumniOf: [
-      { "@type": "CollegeOrUniversity", name: "Western University" },
-      { "@type": "CollegeOrUniversity", name: "Ivey Business School" },
-    ],
-    knowsAbout: ["Finance", "Strategy", "Management consulting", "Investments", "Entrepreneurship"],
-    founder: { "@type": "Organization", name: "Yardex Guelph" },
-    ...(contact.linkedin ? { sameAs: [contact.linkedin] } : {}),
-  };
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd
+        graph={[
+          websiteNode(),
+          personNode(),
+          yardexNode(),
+          pageNode({ type: "ProfilePage", path: "/", name: site.title, description: site.description }),
+        ]}
+      />
       <Ambient />
       <CinematicHero portraitSrc={portrait} availability={profile.availability.open ? profile.availability.label : null} />
       <Introduction />

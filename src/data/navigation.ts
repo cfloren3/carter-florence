@@ -1,6 +1,6 @@
 /**
  * NAVIGATION: header and mobile menu.
- * Single-page site: plain "#id" anchors (work on any host, including the hosted preview).
+ * Real pages for About / Entrepreneurship / Leadership / Media; "/#id" for home sections.
  */
 
 export interface NavItem {
@@ -9,8 +9,10 @@ export interface NavItem {
 }
 
 export const navigation: NavItem[] = [
-  { label: "About", href: "#about" },
-  { label: "Work", href: "#work" },
-  { label: "Story", href: "#story" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Work", href: "/#work" },
+  { label: "Entrepreneurship", href: "/entrepreneurship" },
+  { label: "Leadership", href: "/leadership" },
+  { label: "Media", href: "/media" },
+  { label: "Contact", href: "/#contact" },
 ];

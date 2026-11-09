@@ -1,8 +1,18 @@
+import Link from "next/link";
 import type { Project } from "@/data/projects";
 import { Reveal } from "@/components/animations/Reveal";
 import { ChatThread } from "@/components/chat/ChatThread";
 import { SCOPE_LABEL } from "@/data/metrics";
 import { cn } from "@/lib/utils";
+
+/** Where each chapter continues on its own page. */
+const MORE: Record<string, { href: string; label: string }> = {
+  "yardex-guelph": { href: "/work/yardex-guelph", label: "Read the full Yardex story" },
+  traitcrm: { href: "/entrepreneurship#traitcrm", label: "More on building TraitCRM" },
+  "beyond-borders": { href: "/leadership#beyond-borders", label: "More on Beyond Borders" },
+  deca: { href: "/leadership#deca", label: "More on my DECA leadership" },
+  western: { href: "/leadership#western", label: "More on my roles at Western" },
+};
 
 /** Meta spec rows: Role / Period / Location. */
 export function ChapterMeta({ p, dark }: { p: Project; dark?: boolean }) {
@@ -21,7 +31,9 @@ export function ChapterMeta({ p, dark }: { p: Project; dark?: boolean }) {
         ] as [string, React.ReactNode][])
       : []),
   ];
+  const more = MORE[p.slug];
   return (
+    <>
     <dl className={cn("border-t", dark ? "border-paper/15" : "border-ink/15")}>
       {rows.map(([k, v]) => (
         <div key={k} className={cn("flex items-baseline justify-between gap-6 border-b py-3", dark ? "border-paper/15" : "border-ink/15")}>
@@ -30,6 +42,13 @@ export function ChapterMeta({ p, dark }: { p: Project; dark?: boolean }) {
         </div>
       ))}
     </dl>
+    {more && (
+      <Link href={more.href} className={cn("eyebrow mt-6 inline-flex items-center gap-2", dark ? "text-paper" : "text-ink")}>
+        <span className="link-line">{more.label}</span>
+        <span aria-hidden>→</span>
+      </Link>
+    )}
+    </>
   );
 }
 

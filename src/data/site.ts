@@ -3,8 +3,8 @@
  * ------------------------------------------------------------------
  * Global settings used for SEO, metadata and sitemap generation.
  *
- * ⚠️  Before launch: set `url` to the real production domain. It is used
- *     for canonical URLs, Open Graph images and the sitemap.
+ * `url` is the production domain. It is used for canonical URLs, Open Graph
+ * images, structured data and the sitemap.
  */
 
 export interface SiteConfig {
@@ -24,30 +24,29 @@ export interface SiteConfig {
    * belongs. Set to `false` to hide placeholder-only media tiles in production.
    */
   showPlaceholders: boolean;
+  /** Google Search Console HTML-tag token (only needed for a URL-prefix property). */
+  googleSiteVerification: string | null;
 }
 
 export const site: SiteConfig = {
-  url: "https://carter-florence.vercel.app", // change if a custom domain is added in Vercel
-  title:
-    "Carter Florence | Entrepreneur, Western University Student & Aspiring Strategist",
+  url: "https://carterflorence.com",
+  title: "Carter Florence | Entrepreneur & Western University Student",
   titleTemplate: "%s | Carter Florence",
   description:
-    "Explore the experience, projects, and leadership journey of Carter Florence, a Western University student and entrepreneur interested in consulting, finance, and strategy.",
+    "Carter Florence is a student entrepreneur from Guelph, Ontario, studying at Western University (Ivey AEO). Founder of Yardex Guelph and former Ontario DECA Provincial Officer.",
   locale: "en_CA",
   keywords: [
     "Carter Florence",
-    "Western University",
-    "Ivey Business School",
+    "Carter Florence Guelph",
+    "Carter Florence Western University",
+    "Carter Florence Yardex",
+    "Carter Florence DECA",
+    "Yardex Guelph founder",
+    "student entrepreneur Guelph",
+    "Western University student entrepreneur",
     "Ivey AEO",
-    "International Relations",
-    "Yardex Guelph",
-    "DECA Ontario",
-    "Beyond Borders",
-    "180 Degrees Consulting",
-    "consulting internship",
-    "finance internship",
-    "strategy",
-    "entrepreneur",
+    "Centennial CVI",
   ],
-  showPlaceholders: true,
+  googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || null,
+  showPlaceholders: false,
 };
