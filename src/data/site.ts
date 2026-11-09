@@ -27,7 +27,7 @@ export interface SiteConfig {
 }
 
 export const site: SiteConfig = {
-  url: "https://carterflorence.com", // TODO: confirm production domain
+  url: "https://carter-florence.vercel.app", // change if a custom domain is added in Vercel
   title:
     "Carter Florence | Entrepreneur, Western University Student & Aspiring Strategist",
   titleTemplate: "%s | Carter Florence",
