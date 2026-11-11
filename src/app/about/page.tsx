@@ -10,7 +10,7 @@ import { BIO } from "@/data/bio";
 const description =
   "About Carter Florence: a student entrepreneur from Guelph, Ontario, Centennial CVI graduate and Western University student with Ivey AEO. Founder of Yardex Guelph.";
 
-export const metadata = pageMetadata({ path: "/about", title: "About Carter Florence | Student Entrepreneur, Guelph", description });
+export const metadata = pageMetadata({ path: "/about", title: "About: Biography & Education", description });
 
 export default function AboutPage() {
   const portrait = resolveAsset(profile.portrait.src);

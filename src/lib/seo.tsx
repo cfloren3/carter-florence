@@ -72,6 +72,7 @@ export function personNode() {
     givenName: profile.firstName,
     familyName: profile.lastName,
     url: site.url,
+    mainEntityOfPage: { "@id": `${abs("/")}#webpage` },
     image: abs(profile.portrait.src),
     description: site.description,
     jobTitle: "Founder, Yardex Guelph",
@@ -160,7 +161,9 @@ export function pageNode({ type = "WebPage", path, name, description }: { type?:
     description,
     isPartOf: { "@id": ids.website },
     inLanguage: "en-CA",
-    ...(type === "ProfilePage" || type === "AboutPage" ? { mainEntity: { "@id": ids.person } } : { about: { "@id": ids.person } }),
+    // Only the homepage (ProfilePage) claims the Person as its main entity, so
+    // search engines treat "/" as the canonical page for the name.
+    ...(type === "ProfilePage" ? { mainEntity: { "@id": ids.person } } : { about: { "@id": ids.person } }),
   };
 }
 
